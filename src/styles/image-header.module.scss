@@ -1,0 +1,12 @@
+.header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../images/bg-desktop-light.jpg),
+    linear-gradient(to right, #ac2deb, #5596ff);
+  min-height: 18.75rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}

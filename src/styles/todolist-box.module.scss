@@ -1,0 +1,17 @@
+.todo-header {
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+
+  img {
+    cursor: pointer;
+  }
+}

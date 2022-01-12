@@ -1,0 +1,55 @@
+.todolist-field {
+  background-color: #fff;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+
+  p {
+    font-size: 1.25rem;
+    color: #494c6b;
+    cursor: pointer;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    font-size: 1.125rem;
+    color: #494c6b;
+
+    &::-webkit-input-placeholder {
+      color: #9495a5;
+    }
+
+    &:-ms-input-placeholder {
+      color: #9495a5;
+    }
+
+    &::placeholder {
+      color: #9495a5;
+    }
+  }
+
+  .check-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border-radius: 50%;
+    border: 1px solid #e3e4f1;
+    margin: auto 1.5rem;
+    cursor: pointer;
+
+    img[alt='icon check'] {
+      width: 1rem;
+      height: 0.68rem;
+    }
+
+    &.checked {
+      background-image: linear-gradient(to right bottom, #55ddff, #c058f3);
+    }
+  }
+}
