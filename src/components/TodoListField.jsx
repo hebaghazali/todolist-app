@@ -1,14 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 
 import styles from '../styles/todolist-field.module.scss';
 import IconCheck from '../images/icon-check.svg';
 
-const TodoList = props => {
+const TodoList = ({ onAddField }) => {
   const [check, setCheck] = useState(false);
   const [userInput, setUserInput] = useState('');
-  const [list, setList] = useState([]);
-
-  const InputRef = useRef(null);
 
   const toggleCheck = () => {
     setCheck(!check);
@@ -22,14 +19,10 @@ const TodoList = props => {
 
   const addTodoListField = e => {
     if (e.key === 'Enter') {
-      setList([...list, { input: e.target.value, check }]);
+      onAddField(e.target.value, check);
+      setUserInput('');
     }
   };
-
-  const { onAddField } = props;
-  useEffect(() => {
-    onAddField(list);
-  }, [list]);
 
   return (
     <React.Fragment>
@@ -49,7 +42,6 @@ const TodoList = props => {
           value={userInput}
           onChange={changeText}
           onKeyPress={addTodoListField}
-          ref={InputRef}
         />
       </div>
     </React.Fragment>
