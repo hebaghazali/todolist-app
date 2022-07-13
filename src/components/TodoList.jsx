@@ -9,7 +9,7 @@ const TodoList = () => {
   const addField = (task, check) => {
     setList([
       ...list,
-      { input: task, check, id: Math.floor(Math.random() * 10000) },
+      { input: task, check, id: Math.random().toString(36).slice(2) },
     ]);
   };
 
@@ -25,7 +25,6 @@ const TodoList = () => {
         {list.map(task => (
           <TodoListFieldEntered
             key={task.id}
-            id={task.id}
             task={task}
             onRemoveField={removeField}
           />

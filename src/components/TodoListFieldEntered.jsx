@@ -3,7 +3,7 @@ import styles from '../styles/todolist-field.module.scss';
 import IconCheck from '../images/icon-check.svg';
 import IconCross from '../images/icon-cross.svg';
 
-const TodoListFieldEntered = ({ id, task, onRemoveField }) => {
+const TodoListFieldEntered = ({ task, onRemoveField }) => {
   const [isDone, setIsDone] = useState(false);
 
   const toggleDone = e => {
@@ -15,12 +15,12 @@ const TodoListFieldEntered = ({ id, task, onRemoveField }) => {
   };
 
   const removeTask = () => {
-    onRemoveField(id);
+    onRemoveField(task.id);
   };
 
   return (
     <div>
-      <div className={styles['todolist-field']} id={id}>
+      <div className={styles['todolist-field']} id={task.id}>
         <div
           className={`${styles['check-box']} ${
             task.check ? styles['checked'] : ''
